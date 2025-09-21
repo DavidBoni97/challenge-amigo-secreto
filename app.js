@@ -14,3 +14,14 @@ function agregarAmigo() {
   input.value = '';
   input.focus();
 }
+
+function actualizarLista() {
+  const ul = document.querySelector('#listaAmigos');
+  ul.innerHTML = ''; 
+
+  for (let i = 0; i < listaAmigos.length; i++) {
+    const li = document.createElement('li');
+    li.textContent = listaAmigos[i];
+    ul.appendChild(li);
+  }
+}
